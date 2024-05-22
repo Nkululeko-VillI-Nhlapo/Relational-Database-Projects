@@ -1,0 +1,63 @@
+Universe Database Explanation
+Overview
+The Universe Database is designed to store information about various celestial objects, including galaxies, stars, planets, moons, and comets.
+This database organizes astronomical data in a structured manner, allowing for efficient storage and retrieval of information.
+
+Database Creation Steps
+Logging into PostgreSQL
+To begin, log into PostgreSQL using the provided credentials. This establishes a connection to the PostgreSQL server where the database will be created.
+
+Creating the Database
+Create a new database named universe. This database serves as the main container for all the tables and data related to celestial objects.
+
+Connecting to the Database
+After creating the universe database, connect to it to start creating the necessary tables.
+
+Creating Tables
+Galaxy Table
+
+The galaxy table stores information about different galaxies, including their name, description, type, distance from Earth, and whether they have life. Each galaxy
+has a unique identifier (galaxy_id) that auto-increments.
+Star Table
+
+The star table stores information about stars, including their name, the galaxy they belong to, type, age in millions of years, and brightness. Each star has a unique
+identifier (star_id) that auto-increments. The table references the galaxy table through a foreign key (galaxy_id).
+Planet Table
+
+The planet table stores information about planets, including their name, the star they orbit, whether they are spherical, distance from their star, and whether they have
+life. Each planet has a unique identifier (planet_id) that auto-increments. The table references the star table through a foreign key (star_id).
+Moon Table
+
+The moon table stores information about moons, including their name, the planet they orbit, whether they are round, and their age in millions of years. Each moon has a unique
+identifier (moon_id) that auto-increments. The table references the planet table through a foreign key (planet_id).
+Comet Table
+
+The comet table stores information about comets, including their name, description, whether they are periodic, orbit duration, and who observed them. Each comet has a unique
+identifier (comet_id) that auto-increments.
+Inserting Data
+Inserting Data into Galaxy Table
+
+Insert at least six rows into the galaxy table, providing information about various galaxies.
+Inserting Data into Star Table
+
+Insert at least six rows into the star table, providing information about different stars and their associated galaxies.
+Inserting Data into Planet Table
+
+Insert at least twelve rows into the planet table, providing information about different planets and their associated stars.
+Inserting Data into Moon Table
+
+Insert at least twenty rows into the moon table, providing information about various moons and their associated planets.
+Inserting Data into Comet Table
+
+Insert data into the comet table, providing information about various comets.
+Summary
+The Universe Database consists of five main tables: galaxy, star, planet, moon, and comet. Each table has a primary key that auto-increments and includes necessary columns to store
+detailed information about each celestial object. Foreign keys are used to establish relationships between tables, ensuring data integrity and enabling complex queries across different
+types of celestial objects. This structured approach allows for efficient data management and retrieval in astronomical research and applications.
+
+
+
+
+
+
+
