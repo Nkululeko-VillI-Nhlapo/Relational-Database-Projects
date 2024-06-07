@@ -1,0 +1,69 @@
+Bash Script Documentation
+This are the five bash scripting programs i wrote
+---
+
+1. Fortune Teller
+
+Description:
+A script that simulates a fortune teller. It prompts the user to ask a yes or no question and responds with a randomly chosen answer from a predefined list.
+
+Usage:
+Run the script and follow the prompts to ask a yes or no question. The script will respond with one of the predefined answers.
+
+Key Components:
+- RESPONSES: An array of possible responses.
+- RANDOM: Generates a random number to select a response.
+- GET_FORTUNE: Function to prompt the user for input.
+
+---
+
+2. Countdown Timer
+
+Description:
+A script that counts down from a given positive integer argument to zero, pausing for one second between each number.
+
+Usage:
+Provide a positive integer as an argument when running the script. For example, ./script.sh 10
+
+Key Components:
+- Countdown loop: A while loop that decrements the counter and pauses for one second using sleep.
+
+---
+
+3. Questionnaire
+
+Description:
+A script that asks the user three questions and then prints a summary of the answers.
+
+Usage:
+Run the script and answer the prompts for your name, location, and favorite coding website.
+
+Key Components:
+- Three questions: Predefined questions that the user is prompted to answer.
+- Summary: Outputs a formatted string that includes the user's answers.
+
+---
+
+4. Bingo Number Generator
+
+Description:
+A script that generates a random bingo number (1-75) and prints it with the appropriate letter (B, I, N, G, O) based on the number range.
+
+Usage:
+Run the script and it will generate and display a random bingo number with the corresponding letter.
+
+Key Components:
+- Random number generation: Generates a random number between 1 and 75.
+- Conditional statements: Determines the letter (B, I, N, G, O) based on the number range.
+
+---
+
+How to Use the Scripts:
+
+1. Ensure each script is saved with the appropriate shebang (#!/bin/bash) at the top.
+2. Make each script executable with chmod +x script_name.sh.
+3. Run the script from the terminal using ./script_name.sh and follow the on-screen prompts.
+
+---
+
+Happy Scripting!
