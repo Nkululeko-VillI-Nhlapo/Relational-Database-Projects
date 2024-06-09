@@ -1,0 +1,64 @@
+-----------------------------------------------------
+            PostgreSQL Database Documentation
+-----------------------------------------------------
+
+Database Overview:
+------------------
+The Bike Rental database stores information about bikes, customers, and rentals for a fictional bike rental shop.
+
+Table Descriptions:
+-------------------
+1. bikes:
+   - bike_id: Unique identifier for each bike.
+   - type: Type of bike (e.g., Mountain, Road, BMX).
+   - size: Size of the bike.
+   - available: Indicates whether the bike is available for rent.
+
+2. customers:
+   - customer_id: Unique identifier for each customer.
+   - phone: Phone number of the customer (unique constraint).
+   - name: Name of the customer.
+
+3. rentals:
+   - rental_id: Unique identifier for each rental.
+   - customer_id: Foreign key referencing the customer who rented the bike.
+   - bike_id: Foreign key referencing the bike that was rented.
+   - date_rented: Date when the bike was rented.
+   - date_returned: Date when the bike was returned (nullable).
+
+Constraints:
+------------
+- bikes:
+  - Primary Key: bike_id
+- customers:
+  - Primary Key: customer_id
+  - Unique Constraint: phone
+- rentals:
+  - Primary Key: rental_id
+  - Foreign Key: customer_id (references customers.customer_id)
+  - Foreign Key: bike_id (references bikes.bike_id)
+
+Sample Data:
+------------
+bikes:
+bike_id | type     | size | available
+--------------------------------------
+1       | Mountain | 27   | true
+2       | Mountain | 28   | true
+...
+
+customers:
+customer_id | phone    | name
+-------------------------------
+1           | 555-5555 | Me
+2           | 000-0000 | Test
+...
+
+rentals:
+rental_id | customer_id | bike_id | date_rented | date_returned
+--------------------------------------------------------------
+1         | 1           | 1       | 2021-05-25  | 2024-06-09
+2         | 1           | 2       | 2021-05-25  | 2024-06-09
+...
+
+-----------------------------------------------------

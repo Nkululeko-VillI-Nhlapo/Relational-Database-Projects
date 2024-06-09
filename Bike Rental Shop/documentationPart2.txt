@@ -1,0 +1,63 @@
+-----------------------------------------------------
+             Bike Rental Shop Documentation
+-----------------------------------------------------
+
+## By [Nhlapo Nkululeko]
+
+1. Introduction:
+   The Bike Rental Shop script is a Bash script that provides a command-line interface for a bike rental shop. 
+   It allows users to perform various actions such as renting a bike, returning a bike, viewing rental history, 
+   and truncating the database.
+
+2. Script Overview:
+
+   a. Main Features:
+      - Rent a bike: Users can view available bikes and rent a bike by providing their phone number and name.
+      - Return a bike: Users can return a rented bike by providing their phone number and selecting the bike to return.
+      - View rental history: Users can view their rental history by providing their phone number.
+      - Truncate database: Users can erase all data in the database, resetting it to its initial state.
+
+   b. Additional Functions:
+      - Logging: Activities are logged in a file named 'activity.log' for auditing purposes.
+      - Input Validation: Phone numbers are validated to ensure they are in the correct format (10 digits).
+
+3. Script Components:
+
+   a. Main Menu:
+      - Displays the main menu options and prompts users to select an action.
+
+   b. Rent Menu:
+      - Displays available bikes and prompts users to rent a bike by providing their phone number and name.
+      - Inserts new customers if they don't exist and updates bike availability.
+
+   c. Return Menu:
+      - Prompts users to return a rented bike by providing their phone number and selecting the bike to return.
+      - Updates rental records and bike availability upon return.
+
+   d. View History:
+      - Allows users to view their rental history by providing their phone number.
+
+   e. Truncate Tables:
+      - Erases all data in the database, resetting it to its initial state.
+
+4. Database Overview:
+
+   a. Tables:
+      - bikes: Stores information about available bikes including bike ID, type, size, and availability.
+      - customers: Stores information about customers including customer ID, phone number, and name.
+      - rentals: Stores rental records including rental ID, customer ID, bike ID, rental date, and return date.
+
+   b. Data Population:
+      - Data for the tables can be populated manually or via external scripts.
+
+5. Script Usage:
+
+   - Execute the Bash script to interact with the bike rental shop interface.
+   - Ensure PostgreSQL is installed and configured before running the script.
+
+6. Conclusion:
+
+   The Bike Rental Shop script provides a user-friendly interface for managing bike rentals, 
+   enhancing the efficiency and organization of the rental process.
+
+-----------------------------------------------------
