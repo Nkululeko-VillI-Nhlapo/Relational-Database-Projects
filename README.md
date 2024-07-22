@@ -1,3 +1,5 @@
+<hr>
+
 This repository features a collection of Bash scripts for various tasks, including interactive games, database management, and command-line utilities. Each project is documented with detailed instructions and usage guidelines.
 
 1. **Bike Rental Shop**  
